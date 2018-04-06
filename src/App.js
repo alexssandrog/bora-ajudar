@@ -6,6 +6,7 @@ import Home from './Home';
 import Sobre from './Sobre';
 import Contato from './Contato';
 import Campanhas from './Campanhas';
+import Admin from './Admin';
 import Footer from './Footer';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
         <Route path='/sobre' component={Sobre} />
         <Route path='/campanhas' component={Campanhas} />
         <Route path='/contato' component={Contato} />
+        <Route path='/admin' component={Admin} />
 
         <Footer />
       </div>

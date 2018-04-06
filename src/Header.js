@@ -13,7 +13,7 @@ const Header = (props) => {
             { /* Navigation */}
             <nav className='navbar navbar-expand-lg navbar-dark py-lg-4' id='mainNav'>
                 <div className='container'>
-                    <a className='navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none' href='#'>Asilo Melhor Idade</a>
+                    <a className='navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none' href='/'>Asilo Melhor Idade</a>
                     <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation'>
                         <span className='navbar-toggler-icon'></span>
                     </button>
