@@ -34,7 +34,7 @@ class Campanhas extends Component {
             <div className='product-item-description d-flex ml-auto'>
               <div className='p-5 rounded'>
                 <p className='mb-0'>{campanha.descricao}</p>
-                { campanha.tipo === 'dinheiro' &&
+                { campanha.tipo === 'doacao' &&
                   <div>
                     <div className='progress'>
                       <div className='progress-bar bg-success' role='progressbar' style={{ width: '25%' }} aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>
