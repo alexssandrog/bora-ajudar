@@ -18,9 +18,9 @@ class Campanhas extends Component {
     });
   }
 
-  renderCampanha(campanha) {
+  renderCampanha(key, campanha) {
     return (
-      <section className='page-section'>
+      <section className='page-section' key={key}>
         <div className='container'>
           <div className='product-item bg-faded'>
             <div className='product-item-title d-flex'>
@@ -88,7 +88,7 @@ class Campanhas extends Component {
         {
           Object
             .keys(this.state.campanhas)
-            .map(key => this.renderCampanha(this.state.campanhas[key]))
+            .map(key => this.renderCampanha(key, this.state.campanhas[key]))
         }
 
       </div>
