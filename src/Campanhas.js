@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import base from './base';
+import axios from 'axios';
 
 class Campanhas extends Component {
   constructor(props) {
@@ -15,6 +16,18 @@ class Campanhas extends Component {
       context: this,
       state: 'campanhas',
       asArray: false
+    });
+  }
+
+  handleDonate(key){
+    console.log(key);
+    axios
+    .post('/api/donate',{
+      campanha: key,
+      valor: 3
+    })
+    .then(data => {
+      console.log(data);
     });
   }
 
@@ -41,7 +54,7 @@ class Campanhas extends Component {
                     </div>
                     <p>Meta: R$ 5.000,00 / Atingidos: R$ 2.500,00</p>
                     <div>
-                      <button className='btn btn-success'>Contribuir</button>
+                      <button className='btn btn-success' onClick={() => this.handleDonate(key)}>Contribuir</button>
                     </div>
                   </div> 
                 }

@@ -1,9 +1,5 @@
 import React from 'react';
 
-fetch('/helloWorld')
-.then(value => value.text())
-.then(value => console.log(value));
-
 const Home = (props) => {
     return (
         <div>
