@@ -22,12 +22,12 @@ class Campanhas extends Component {
   handleDonate(key){
     console.log(key);
     axios
-    .post('/api/donate',{
+    .post('https://us-central1-bora-ajudar-838e4.cloudfunctions.net/api/donate',{
       campanha: key,
       valor: 3
     })
     .then(data => {
-      console.log(data);
+      window.location = data.data.url;
     });
   }
 
@@ -50,9 +50,9 @@ class Campanhas extends Component {
                 { campanha.tipo === 'doacao' &&
                   <div>
                     <div className='progress'>
-                      <div className='progress-bar bg-success' role='progressbar' style={{ width: '25%' }} aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>
+                      <div className='progress-bar bg-success' role='progressbar' style={{ width: '25%' }} aria-valuenow={campanha.doado / campanha.meta} aria-valuemin='0' aria-valuemax='100'></div>
                     </div>
-                    <p>Meta: R$ 5.000,00 / Atingidos: R$ 2.500,00</p>
+                    <p>Meta: R$ {campanha.meta} / Atingidos: R$ {campanha.doado}</p>
                     <div>
                       <button className='btn btn-success' onClick={() => this.handleDonate(key)}>Contribuir</button>
                     </div>
